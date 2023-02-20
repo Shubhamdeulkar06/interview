@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Closure Example</title>
+</head>
+
+<body>
+  <h1>This is an example of closure</h1>
+  <button id="gray">Gray</button>
+  <button id="lightPink">Light Pink</button>
+
+</body>
+<script>
+
+  function clickHandler(color) {
+    return function () {
+      document.body.style.backgroundColor = `${color}`;
+    }
+
+  }
+  document.getElementById("gray").onclick = clickHandler('gray');
+  document.getElementById("lightPink").onclick = clickHandler('lightpink');
+</script>
+
+</html>
